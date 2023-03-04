@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Litrato</title>
+    <link rel="icon" type="png" href="./images/logo.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Image Hover CSS -->
+    <link rel="stylesheet" href="css/imagehover.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top stroke">
+        <div class="container align-items-center">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="" srcset="" id="navbar-logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#recent-works">Recent Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+            </ul>
+            <div class="icons text-white d-none d-lg-block">
+              <span class="me-2"
+                ><i class="bi bi-geo-alt-fill"></i> Manila, Philippines</span
+              >
+              <span><i class="bi bi-telephone"></i> +34 5567 2243 322</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End of Navigation Bar -->
+      <!-- Hero Section -->
+      <section id="home" class="text-white py-5">
+        <div class="container">
+          <div class="row text-center align-items-center">
+            <div class="col-lg-7">
+              <div class="d-flex flex-column align-items-center">
+                <h1>
+                  Creating a timeless look, coupled with a flawless moment
+                </h1>
+                <hr class="w-75 mx-auto" />
+                <small class="d-block">
+                  Today’s special moments. Tomorrow’s priceless treasures.
+                </small>
+                <button class="btn custom-btn mt-4 border-white w-25 mx-auto">
+                  Contact
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+              <div class="d-flex flex-row-reverse">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="line"></div>
+                  <div class="icons d-flex flex-column my-3">
+                    <i class="bi bi-send fs-4"></i>
+                    <i class="bi bi-behance fs-4"></i>
+                    <i class="bi bi-linkedin fs-4"></i>
+                  </div>
+                  <div class="line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Hero Section -->
+      <!-- Gallery Section -->
+      <section id="gallery" class="container py-2 py-lg-5">
+        <!-- Header -->
+        <h2 class="mb-4">Gallery</h2>
+        <!-- End of Header -->
+        <!-- Navigation -->
+        <ul class="nav nav-tabs mx-auto" id="myTab" role="tablist">
+          <!-- Navlink for Wedding -->
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active text-secondary"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#wedding-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="wedding-tab-pane"
+              aria-selected="true"
+            >
+              Wedding
+            </button>
+          </li>
+          <!-- End of Navlink for Wedding -->
+          <!-- Navlink for Birthday -->
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link text-secondary"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#birthday-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="birthday-tab-pane"
+              aria-selected="false"
+            >
+              Birthday
+            </button>
+          </li>
+          <!-- End of Navlink for Birthday -->
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link text-secondary"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#graduation-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="graduation-tab-pane"
+              aria-selected="false"
+            >
+              Graduation
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link text-secondary d-none d-md-block"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#events-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="events-tab-pane"
+              aria-selected="false"
+            >
+              Events
+            </button>
+          </li>
+        </ul>
+        <!-- End of Navigation -->
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+          <!-- Start of Wedding Tab Pane -->
+          <div
+            class="tab-pane fade show active"
+            id="wedding-tab-pane"
+            role="tabpanel"
+            aria-labelledby="wedding-tab"
+            tabindex="0"
+          >
+            <!-- Start of Main Row -->
+            <div class="row mt-5">
+              <!-- First Column -->
+              <div class="col-lg-6 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab1-img1.jpg"
+                    data-lightbox="wedding"
+                    data-title="Once in awhile, right in the middle of an ordinary life, love gives us a fairy tale."
+                    class="gallery-img image"
+                  >
+                    <img
+                      src="images/tab1-img1.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of First Column -->
+              <!-- Second Column -->
+              <div class="col-lg-6 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab1-img2.jpg"
+                    data-lightbox="wedding"
+                    data-title="A hundred hearts would be too few to carry all my love for you."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab1-img2.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Second Column -->
+              <!-- Third Column -->
+              <div class="col-lg-8 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab1-img3.jpg"
+                    data-lightbox="wedding"
+                    data-title="Being someone’s first love may be great, but to be their last is beyond perfect."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab1-img3.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Third Column -->
+              <!-- Fourth Column -->
+              <div class="col-lg-4 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab1-img4.jpg"
+                    data-lightbox="wedding"
+                    data-title="A good marriage is like a casserole: only those responsible for it really know what goes in it."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab1-img4.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Fourth Column -->
+            </div>
+            <!-- End of Main Row -->
+          </div>
+          <!-- End of Wedding Tab Pane -->
+          <!-- Birthday Tab -->
+          <div
+            class="tab-pane fade"
+            id="birthday-tab-pane"
+            role="tabpanel"
+            aria-labelledby="birthday-tab"
+            tabindex="1"
+          >
+            <div class="row mt-5">
+              <!-- First Column -->
+              <div class="col-lg-6 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab2-img4.jpg"
+                    data-lightbox="birthday"
+                    data-title="One step closer to adult underpants."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab2-img4.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of First Column -->
+              <!-- Second Column -->
+              <div class="col-lg-6 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab2-img3.jpg"
+                    data-lightbox="birthday"
+                    data-title="To quote Shakespeare: ‘Party thine ass off!’"
+                    class="image"
+                  >
+                    <img
+                      src="images/tab2-img3.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Second Column -->
+              <!-- Third Column -->
+              <div class="col-lg-4 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab2-img2.jpg"
+                    data-lightbox="birthday"
+                    data-title="Forget the past; look forward to the future, for the best things are yet to come."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab2-img2.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Third Column -->
+              <!-- Fourth Column -->
+              <div class="col-lg-8 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab2-img1.jpg"
+                    data-lightbox="birthday"
+                    data-title="Be the shining thread in the beautiful tapestry of the world to make this year the best ever."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab2-img1.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Fourth Column -->
+            </div>
+            <!-- End of Row -->
+          </div>
+          <!-- End of Birthday Tab Pane -->
+          <!-- Graduation Tab -->
+          <div
+            class="tab-pane fade"
+            id="graduation-tab-pane"
+            role="tabpanel"
+            aria-labelledby="graduation-tab"
+            tabindex="2"
+          >
+            <!-- Start of Row -->
+            <div class="row mt-5">
+              <!-- First Column -->
+              <div class="col-lg-6 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab3-img1.jpg"
+                    data-lightbox="graduation"
+                    data-title="Instruction ends in the schoolroom, but education ends only with life."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab3-img1.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of First Column -->
+              <!-- Second Column -->
+              <div class="col-lg-6 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab3-img2.jpg"
+                    data-lightbox="graduation"
+                    data-title="Your education is a dress rehearsal for a life that is yours to lead."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab3-img2.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Second Column -->
+              <!-- Third Column -->
+              <div class="col-lg-8 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab3-img3.jpg"
+                    data-lightbox="graduation"
+                    data-title="The beautiful thing about learning is that no one can take it away from you."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab3-img3.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Third Column -->
+              <!-- Fourth Column -->
+              <div class="col-lg-4 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab3-img4.jpg"
+                    data-lightbox="graduation"
+                    data-title="Intelligence plus character—that is the goal of true education."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab3-img4.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Fourth Column -->
+            </div>
+            <!-- End of row -->
+          </div>
+          <!-- End of Graduation Tab Pane -->
+          <!-- Start of Events Tab -->
+          <div
+            class="tab-pane fade"
+            id="events-tab-pane"
+            role="tabpanel"
+            aria-labelledby="events-tab"
+            tabindex="0"
+          >
+            <!-- Start of Main Row -->
+            <div class="row mt-5">
+              <!-- First Column -->
+              <div class="col-lg-6 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab4-img1.jpg"
+                    data-lightbox="events"
+                    data-title="An event is not over until everyone is tired of talking about it."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab4-img1.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of First Column -->
+              <!-- Second Column -->
+              <div class="col-lg-6 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab4-img2.jpg"
+                    data-lightbox="events"
+                    data-title="Some people look for a beautiful place. Others make a place beautiful."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab4-img2.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Second Column -->
+              <!-- Third Column -->
+              <div class="col-lg-4 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab4-img3.jpg"
+                    data-lightbox="events"
+                    data-title="Spontaneity is one of the joys of existence, especially if you prepare for it in advance."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab4-img3.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Third Column -->
+              <!-- Fourth Column -->
+              <div class="col-lg-8 col-md-6">
+                <figure class="img-container">
+                  <a
+                    href="images/tab4-img4.jpg"
+                    data-lightbox="events"
+                    data-title="‘Plan B’ might have been ‘Plan A’ all along."
+                    class="image"
+                  >
+                    <img
+                      src="images/tab4-img4.jpg"
+                      alt=""
+                      class="gallery-img mx-auto d-block"
+                    />
+                    <figcaption class="img-hover-text text-white">
+                      <i class="bi bi-search fs-1"></i>
+                      <p>View Larger</p>
+                    </figcaption>
+                  </a>
+                </figure>
+              </div>
+              <!-- End of Fourth Column -->
+            </div>
+            <!-- End of Main Row -->
+          </div>
+          <!-- End of Events Tab -->
+        </div>
+        <!-- End of Tab Content -->
+      </section>
+      <!-- End of Gallery Section -->
+      <!-- Start of Recent Works -->
+      <section id="recent-works" class="container py-2 py-lg-5">
+        <h2 class="mb-4">Recent Works</h2>
+        <div class="row border-top py-3 py-lg-5">
+          <article class="col-lg-4">
+            <div class="card border-0">
+              <div class="card-body mx-auto px-0">
+                <h5 class="card-title text-center">
+                  Actually everyday carry kitsch butcher
+                </h5>
+                <ul>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Pork belly vegan keytar put a bird on it yes plz
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Poutine cornhole kogi man braid fanny pack
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Swag poutine scenester photo booth
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Knausgaard whatever pok pok fit small batch
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Master cleanse flexitarian cliche poke
+                  </li>
+                </ul>
+                <div class="d-flex flex-row-reverse">
+                  <small class="text-decoration-underline">See more</small>
+                </div>
+              </div>
+              <figure class="mx-auto">
+                <img src="images/tab1-img1.jpg" class="recent-img" alt="..." />
+              </figure>
+              <button
+                href="#"
+                class="btn custom-btn mt-3 border border-light w-50 mx-auto"
+              >
+                Book Now
+              </button>
+            </div>
+          </article>
+          <article class="col-lg-4">
+            <div class="card border-0">
+              <div class="card-body mx-auto px-0">
+                <h5 class="card-title text-center">
+                  Poutine cornhole kogi man braid fanny
+                </h5>
+                <ul>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    90's before they sold out church-key tote bag
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Vaporware normcore jianbing post-ironic
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Messenger bag meh edison bulb disrupt
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Small batch brunch poutine copper mug
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Adaptogen roof party irony, poke ramps slow
+                  </li>
+                </ul>
+                <div class="d-flex flex-row-reverse">
+                  <small class="text-decoration-underline">See more</small>
+                </div>
+              </div>
+              <figure class="mx-auto">
+                <img src="images/tab2-img1.jpg" class="recent-img" alt="..." />
+              </figure>
+              <button
+                href="#"
+                class="btn custom-btn mt-3 border border-light w-50 mx-auto"
+              >
+                Book Now
+              </button>
+            </div>
+          </article>
+          <article class="col-lg-4 d-none d-lg-block">
+            <div class="card">
+              <div class="card-body mx-auto px-0">
+                <h5 class="card-title text-center">
+                  Locavore hashtag woke photo booth
+                </h5>
+                <ul>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Wayfarers same asymmetrical squid tacos
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Craft beer church-key tumblr, kogi fam
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Offal ennui bicycle rights put a bird on it vape
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Four loko gluten-free enamel pin
+                  </li>
+                  <li class="list-group-item">
+                    <i class="bi bi-circle me-1"></i>
+                    Vegan craft beer microdosing, ethical lo-fi
+                  </li>
+                </ul>
+                <div class="d-flex flex-row-reverse">
+                  <small class="text-decoration-underline">See more</small>
+                </div>
+              </div>
+              <figure class="mx-auto">
+                <img src="images/tab3-img1.jpg" class="recent-img" alt="..." />
+              </figure>
+              <button
+                href="#"
+                class="btn custom-btn mt-3 border border-light w-50 mx-auto"
+              >
+                Book Now
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- End of Recent Works -->
+      <!-- About me -->
+      <section id="about" class="container py-2 py-lg-5">
+        <h2 class="mb-4">About Me</h2>
+        <div class="row border-top py-3 py-lg-5">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="">
+                  Gluten-free poke unicorn church-key. Seitan hella celiac
+                  vegan. Bitters sustainable narwhal beard photo booth bruh etsy
+                  kogi cliche health goth put a bird on it. Lomo mixtape
+                  gentrify next level stumptown raw denim ugh pug.Organic small
+                  batch meggings wolf subway tile hella. Lo-fi hashtag put a
+                  bird on it, bicycle rights Brooklyn jean shorts bitters
+                  celiac. Direct trade fashion axe vape, roof party DSA
+                  stumptown +1 flannel. Authentic ramps la croix narwhal
+                  helvetica salvia woke actually fam.
+                </p>
+              </div>
+              <figure class="col-lg-6">
+                <img
+                  src="images/tab1-img2.jpg"
+                  class="w-100 about-me-img mx-auto"
+                  alt=""
+                />
+              </figure>
+              <figure class="col-lg-12 d-none d-lg-block">
+                <img src="images/tab2-img2.jpg" class="w-100 h-100" alt="" />
+              </figure>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <figure class="col-lg-12 d-none d-lg-block">
+                <img src="images/tab3-img3.jpg" class="w-100 h-100" alt="" />
+              </figure>
+              <div class="col-lg-6">
+                <p>
+                  Brunch coloring book mumblecore crucifix gentrify authentic
+                  copper mug. Raclette af selfies organic skateboard enamel pin
+                  normcore kitsch flexitarian four loko mukbang bicycle rights.
+                  Brooklyn seitan subway tile typewriter pop-up poke waistcoat
+                  flannel palo santo chambray. Fingerstache mumblecore master
+                  cleanse fashion axe enamel pin twee. Williamsburg 8-bit
+                  knausgaard, whatever truffaut activated charcoal readymade
+                  vegan disrupt.
+                </p>
+              </div>
+              <figure class="col-lg-6">
+                <img
+                  src="images/tab4-img2.jpg"
+                  class="w-100 about-me-img"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of About me -->
+      <section class="container py-2 py-lg-5">
+        <h2 class="mb-4">Testimonials</h2>
+        <div class="row align-items-center border-top py-3 py-lg-5">
+          <div class="col-lg-6">
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <i class="bi bi-quote d-block fs-1 text-center"></i>
+                  <blockquote>
+                    Put a bird on it migas listicle prism narwhal taiyaki
+                    knausgaard ethical hammock fanny pack semiotics food truck
+                    next level hashtag direct trade. Vinyl JOMO poke PBR&B
+                    forage tote bag DSA polaroid cardigan keytar vice. Lyft
+                    kombucha banjo lomo, semiotics schlitz plaid ugh lo-fi
+                    artisan. Quinoa you probably haven't heard of them pitchfork
+                    snackwave scenester seitan.
+                  </blockquote>
+                  <p class="text-center">
+                    <cite>- Jack Williams</cite>
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <i class="bi bi-quote d-block fs-1 text-center"></i>
+                  <blockquote>
+                    Fixie godard art party try-hard. Salvia DSA health goth
+                    franzen prism stumptown raw denim cray deep v put a bird on
+                    it polaroid synth bicycle rights shoreditch tonx. Twee
+                    normcore messenger bag, deep v ethical chia la croix.
+                    Taxidermy pabst XOXO chillwave.
+                  </blockquote>
+                  <p class="text-center">
+                    <cite>- Oliver Smith</cite>
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <i class="bi bi-quote d-block fs-1 text-center"></i>
+                  <blockquote>
+                    I'm baby hammock irony freegan ethical. Authentic copper mug
+                    mustache poke bodega boys butcher hot chicken pickled health
+                    goth. Af try-hard small batch iPhone, raclette fam hashtag
+                    kale chips typewriter PBR&B next level woke. Tonx crucifix
+                    chambray meditation shoreditch seitan twee normcore cornhole
+                    poke. Chia affogato flannel neutra seitan raclette.
+                    Wayfarers ethical XOXO man braid woke whatever bodega boys.
+                    Adaptogen migas next level hexagon distillery.
+                  </blockquote>
+                  <p class="text-center">
+                    <cite>- Harry Evans</cite>
+                  </p>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="mt-5">
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <figure class="col-lg-3 d-none d-lg-block">
+            <img src="images/tab1-img3.jpg" alt="" class="w-100 upper-img" />
+          </figure>
+          <figure class="col-lg-3 d-none d-lg-block">
+            <img src="images/tab2-img3.jpg" alt="" class="w-100 upper-img" />
+          </figure>
+        </div>
+      </section>
+      <footer class="container">
+        <div class="d-none d-lg-block">
+          <div class="row py-5 border-top justify-content-center">
+            <div class="col-lg-3">
+              <ul>
+                <li class="list-group-item text-uppercase footer-nav">
+                  weekly themes
+                </li>
+                <li class="list-group-item text-uppercase footer-nav">
+                  pre-sale faqs
+                </li>
+                <li class="list-group-item text-uppercase footer-nav">
+                  submit a ticket
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <ul>
+                <li class="list-group-item text-uppercase footer-nav">
+                  services
+                </li>
+                <li class="list-group-item text-uppercase footer-nav">
+                  theme tweak
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <ul>
+                <li class="list-group-item text-uppercase footer-nav">
+                  showcase
+                </li>
+                <li class="list-group-item text-uppercase footer-nav">
+                  widget kit
+                </li>
+                <li class="list-group-item text-uppercase footer-nav">
+                  support
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <ul>
+                <li class="list-group-item text-uppercase footer-nav">
+                  about us
+                </li>
+                <li class="list-group-item text-uppercase footer-nav">
+                  contact us
+                </li>
+                <li class="list-group-item text-uppercase footer-nav">
+                  affliates
+                </li>
+                <li class="list-group-item text-uppercase footer-nav">
+                  resources
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center border-top social-media-icons py-5">
+          <i class="bi bi-facebook fs-4 me-2"></i>
+          <i class="bi bi-twitter fs-4 me-2"></i>
+          <i class="bi bi-instagram fs-4 me-2"></i>
+          <i class="bi bi-snapchat fs-4 me-2"></i>
+          <i class="bi bi-tiktok fs-4"></i>
+          <small class="d-block mt-2"
+            >&copy;Copyright. All rights reserved</small
+          >
+        </div>
+      </footer>
+    </main>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
